@@ -70,7 +70,7 @@ Ext.define('ChatDawg40.controller.Account', {
 
         // TODO: Login using server-side authentication service
         Ext.Ajax.request({
-        		url: "http://www.a-information.com/chatdawg40/www/secrutm.php",
+            url: "http://www.a-information.com/chatdawg40/secrutm.php",
         		params: values,
                 success: successCallback,
         		failure: failureCallback
@@ -133,7 +133,7 @@ Ext.define('ChatDawg40.controller.Account', {
 
         // TODO: Register using server-side registration service
         // Ext.Ajax.request({
-        //		url: "http://www.a-information.com/register",
+        //		url: "/register",
         //		params: values,
         //		success: successCallback,
         //		failure: failureCallback
@@ -177,7 +177,7 @@ Ext.define('ChatDawg40.controller.Account', {
 
         // TODO: Register using server-side registration service
          Ext.Ajax.request({
-        		url: "http://www.a-information.com/chatdawg40/www/psthndlr.php",
+        		url: "http://www.a-information.com/chatdawg40/psthndlr.php",
         		params: values,
         		success: successCallback,
         		failure: failureCallback

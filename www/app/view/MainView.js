@@ -19,7 +19,10 @@ Ext.define('ChatDawg40.view.MainView', {
 
     requires: [
         'Ext.tab.Panel',
-        'Ext.tab.Tab'
+        'Ext.tab.Tab',
+        'Ext.grid.Panel',
+        'Ext.grid.View',
+        'Ext.grid.column.Column'
     ],
 
     itemId: 'mainView',
@@ -90,15 +93,66 @@ Ext.define('ChatDawg40.view.MainView', {
                             items: [
                                 {
                                     xtype: 'panel',
-                                    title: 'Tab 1'
+                                    title: 'Public',
+                                    items: [
+                                        {
+                                            xtype: 'gridpanel',
+                                            title: 'My Grid Panel',
+                                            store: 'publicPostStore',
+                                            columns: [
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    width: 119,
+                                                    dataIndex: 'username',
+                                                    text: 'Username'
+                                                },
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    width: 410,
+                                                    dataIndex: 'post',
+                                                    text: 'Post'
+                                                },
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    dataIndex: 'type',
+                                                    text: 'Type'
+                                                },
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    dataIndex: 'userid',
+                                                    text: 'Userid'
+                                                },
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    dataIndex: 'posturlID',
+                                                    text: 'PosturlID'
+                                                },
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    dataIndex: 'postpictureID',
+                                                    text: 'PostpictureID'
+                                                },
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    dataIndex: 'postvideoID',
+                                                    text: 'PostvideoID'
+                                                },
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    dataIndex: 'linkedpost',
+                                                    text: 'Linkedpost'
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 },
                                 {
                                     xtype: 'panel',
-                                    title: 'Tab 2'
+                                    title: 'Friends'
                                 },
                                 {
                                     xtype: 'panel',
-                                    title: 'Tab 3'
+                                    title: 'Party'
                                 }
                             ]
                         }

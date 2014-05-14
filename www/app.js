@@ -24,11 +24,17 @@ Ext.application({
     requires: [
         'Ext.window.MessageBox'
     ],
+    models: [
+        'postModel'
+    ],
+    stores: [
+        'publicPostStore'
+    ],
     views: [
         'MainView',
         'LoginForm',
         'RegisterForm',
-        'PostForm'
+        'Post'
     ],
     controllers: [
         'Account'
