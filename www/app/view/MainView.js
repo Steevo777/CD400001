@@ -84,6 +84,7 @@ Ext.define('ChatDawg40.view.MainView', {
                 {
                     xtype: 'panel',
                     region: 'center',
+                    autoRender: true,
                     itemId: 'contentPanel',
                     title: 'Content',
                     items: [
@@ -97,7 +98,10 @@ Ext.define('ChatDawg40.view.MainView', {
                                     items: [
                                         {
                                             xtype: 'gridpanel',
+                                            autoRender: true,
+                                            autoShow: true,
                                             title: 'My Grid Panel',
+                                            titleCollapse: false,
                                             store: 'publicPostStore',
                                             columns: [
                                                 {
