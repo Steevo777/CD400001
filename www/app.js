@@ -28,7 +28,7 @@ Ext.application({
         'MainView',
         'LoginForm',
         'RegisterForm',
-        'Post'
+        'PostForm'
     ],
     controllers: [
         'Account'

@@ -93,7 +93,7 @@ Ext.define('ChatDawg40.controller.Account', {
     showPost: function(target) {
 
         // Create new register form window
-        var register = Ext.create("widget.postform");
+        var post = Ext.create("widget.postform");
 
         // Show window
         post.show();
