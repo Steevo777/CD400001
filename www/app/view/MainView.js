@@ -100,6 +100,8 @@ Ext.define('ChatDawg40.view.MainView', {
                                             xtype: 'gridpanel',
                                             autoRender: true,
                                             autoShow: true,
+                                            height: 476,
+                                            autoScroll: true,
                                             title: 'My Grid Panel',
                                             titleCollapse: false,
                                             store: 'publicPostStore',
