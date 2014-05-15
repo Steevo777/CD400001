@@ -38,7 +38,7 @@ Ext.define('ChatDawg40.view.MainView', {
                     region: 'north',
                     height: 100,
                     itemId: 'headerPanel',
-                    title: 'Header',
+                    title: '',
                     dockedItems: [
                         {
                             xtype: 'panel',
@@ -86,7 +86,7 @@ Ext.define('ChatDawg40.view.MainView', {
                     region: 'center',
                     autoRender: true,
                     itemId: 'contentPanel',
-                    title: 'Content',
+                    title: '',
                     items: [
                         {
                             xtype: 'tabpanel',
@@ -102,7 +102,7 @@ Ext.define('ChatDawg40.view.MainView', {
                                             autoShow: true,
                                             height: 476,
                                             autoScroll: true,
-                                            title: 'My Grid Panel',
+                                            title: '',
                                             titleCollapse: false,
                                             store: 'publicPostStore',
                                             columns: [
