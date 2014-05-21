@@ -20,6 +20,7 @@ Ext.define('ChatDawg40.view.PostForm', {
     requires: [
         'Ext.form.Panel',
         'Ext.form.field.Text',
+        'Ext.form.field.Checkbox',
         'Ext.button.Button'
     ],
 
@@ -36,6 +37,7 @@ Ext.define('ChatDawg40.view.PostForm', {
             items: [
                 {
                     xtype: 'form',
+                    height: 186,
                     itemId: 'form',
                     bodyPadding: 10,
                     items: [
@@ -43,12 +45,44 @@ Ext.define('ChatDawg40.view.PostForm', {
                             xtype: 'textfield',
                             anchor: '100%',
                             margin: '0 0 10 0',
-                            fieldLabel: 'Name',
+                            fieldLabel: 'Post:',
                             labelAlign: 'right',
                             msgTarget: 'title',
                             name: 'post',
                             allowBlank: false,
                             blankText: 'Enter your full name.'
+                        },
+                        {
+                            xtype: 'checkboxfield',
+                            anchor: '100%',
+                            fieldLabel: '',
+                            labelAlign: 'right',
+                            name: 'party',
+                            boxLabel: 'Party'
+                        },
+                        {
+                            xtype: 'checkboxfield',
+                            anchor: '100%',
+                            fieldLabel: '',
+                            labelAlign: 'right',
+                            name: 'public',
+                            boxLabel: 'Public'
+                        },
+                        {
+                            xtype: 'checkboxfield',
+                            anchor: '100%',
+                            fieldLabel: '',
+                            labelAlign: 'right',
+                            name: 'friends',
+                            boxLabel: 'Friends'
+                        },
+                        {
+                            xtype: 'checkboxfield',
+                            anchor: '100%',
+                            fieldLabel: '',
+                            labelAlign: 'right',
+                            name: 'family',
+                            boxLabel: 'Family'
                         },
                         {
                             xtype: 'button',

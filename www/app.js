@@ -28,7 +28,9 @@ Ext.application({
         'postModel'
     ],
     stores: [
-        'publicPostStore'
+        'publicPostStore',
+        'freindsStore',
+        'partyStore'
     ],
     views: [
         'MainView',

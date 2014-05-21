@@ -155,13 +155,7 @@ Ext.define('ChatDawg40.controller.Account', {
         // Success
         var successCallback = function(resp, ops) {
 
-            // Hide login panel
-            loginPanel.hide();
-
-            // Show logout panel
-            logoutPanel.show();
-
-        	// Close window
+            // Close window
             formWindow.destroy();
 
         };
@@ -170,7 +164,7 @@ Ext.define('ChatDawg40.controller.Account', {
         var failureCallback = function(resp, ops) {
 
             // Show registration failure error
-            Ext.Msg.alert("Post Failure", resp);
+            //Ext.Msg.alert("Post Failure", resp);
 
         };
 

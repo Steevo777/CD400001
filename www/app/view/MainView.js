@@ -20,9 +20,7 @@ Ext.define('ChatDawg40.view.MainView', {
     requires: [
         'Ext.tab.Panel',
         'Ext.tab.Tab',
-        'Ext.grid.Panel',
-        'Ext.grid.View',
-        'Ext.grid.column.Column',
+        'Ext.view.View',
         'Ext.XTemplate'
     ],
 
@@ -98,63 +96,19 @@ Ext.define('ChatDawg40.view.MainView', {
                                     title: 'Public',
                                     items: [
                                         {
-                                            xtype: 'gridpanel',
+                                            xtype: 'dataview',
                                             autoRender: true,
-                                            autoShow: true,
-                                            height: 476,
                                             autoScroll: true,
-                                            title: '',
-                                            titleCollapse: false,
-                                            store: 'publicPostStore',
-                                            columns: [
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    width: 119,
-                                                    dataIndex: 'username',
-                                                    text: 'Username'
-                                                },
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    width: 410,
-                                                    dataIndex: 'post',
-                                                    text: 'Post'
-                                                },
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    dataIndex: 'type',
-                                                    text: 'Type'
-                                                },
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    dataIndex: 'userid',
-                                                    text: 'Userid'
-                                                },
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    dataIndex: 'posturlID',
-                                                    text: 'PosturlID'
-                                                },
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    dataIndex: 'postpictureID',
-                                                    text: 'PostpictureID'
-                                                },
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    dataIndex: 'postvideoID',
-                                                    text: 'PostvideoID'
-                                                },
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    dataIndex: 'linkedpost',
-                                                    text: 'Linkedpost'
-                                                },
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    dataIndex: 'date',
-                                                    text: 'Date'
-                                                }
-                                            ]
+                                            itemSelector: 'div',
+                                            itemTpl: [
+                                                '',
+                                                '    <p style="color:gray;margin-left:20px;">{username}  {date}</p>',
+                                                '    <p style="color:blue;margin-left:20px;">{post}</p>',
+                                                '<tpl if="postpictureID"><p><img src="{postpictureID}" alt="Smiley face" height="42" width="42"></p></tpl>',
+                                                '    <p style="color:gray;margin-left:20px;">Smile({smile}) Frown({frown}) Sad({sad}) Viewed ({viewed})</p>',
+                                                '--------------------------------------------------'
+                                            ],
+                                            store: 'publicPostStore'
                                         }
                                     ]
                                 },
@@ -171,16 +125,34 @@ Ext.define('ChatDawg40.view.MainView', {
                                                 '',
                                                 '    <p style="color:gray;margin-left:20px;">{username}  {date}</p>',
                                                 '    <p style="color:blue;margin-left:20px;">{post}</p>',
-                                                '<p style="color:gray;margin-left:20px;">Smile({smile}) Frown({frown}) Sad({sad}) Viewed ({viewed})</p>',
+                                                '<tpl if="postpictureID"><p><img src="{postpictureID}" alt="Smiley face" height="42" width="42"></p></tpl>',
+                                                '    <p style="color:gray;margin-left:20px;">Smile({smile}) Frown({frown}) Sad({sad}) Viewed ({viewed})</p>',
                                                 '--------------------------------------------------'
                                             ],
-                                            store: 'publicPostStore'
+                                            store: 'freindsStore'
                                         }
                                     ]
                                 },
                                 {
                                     xtype: 'panel',
-                                    title: 'Party'
+                                    title: 'Party',
+                                    items: [
+                                        {
+                                            xtype: 'dataview',
+                                            autoRender: true,
+                                            autoScroll: true,
+                                            itemSelector: 'div',
+                                            itemTpl: [
+                                                '',
+                                                '    <p style="color:gray;margin-left:20px;">{username}  {date}</p>',
+                                                '    <p style="color:blue;margin-left:20px;">{post}</p>',
+                                                '<tpl if="postpictureID"><p><img src="{postpictureID}" alt="Smiley face" height="42" width="42"></p></tpl>',
+                                                '    <p style="color:gray;margin-left:20px;">Smile({smile}) Frown({frown}) Sad({sad}) Viewed ({viewed})</p>',
+                                                '--------------------------------------------------'
+                                            ],
+                                            store: 'partyStore'
+                                        }
+                                    ]
                                 }
                             ]
                         }
