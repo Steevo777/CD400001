@@ -49,6 +49,9 @@ Ext.define('ChatDawg40.model.postModel', {
         },
         {
             name: 'linkedpost'
+        },
+        {
+            name: 'date'
         }
     ]
 });

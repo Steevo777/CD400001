@@ -22,7 +22,8 @@ Ext.define('ChatDawg40.view.MainView', {
         'Ext.tab.Tab',
         'Ext.grid.Panel',
         'Ext.grid.View',
-        'Ext.grid.column.Column'
+        'Ext.grid.column.Column',
+        'Ext.XTemplate'
     ],
 
     itemId: 'mainView',
@@ -147,6 +148,11 @@ Ext.define('ChatDawg40.view.MainView', {
                                                     xtype: 'gridcolumn',
                                                     dataIndex: 'linkedpost',
                                                     text: 'Linkedpost'
+                                                },
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    dataIndex: 'date',
+                                                    text: 'Date'
                                                 }
                                             ]
                                         }
@@ -154,7 +160,20 @@ Ext.define('ChatDawg40.view.MainView', {
                                 },
                                 {
                                     xtype: 'panel',
-                                    title: 'Friends'
+                                    title: 'Friends',
+                                    items: [
+                                        {
+                                            xtype: 'dataview',
+                                            autoRender: true,
+                                            autoScroll: true,
+                                            itemSelector: 'div',
+                                            itemTpl: [
+                                                '{username}:{date}',
+                                                '<p>{post}</p>'
+                                            ],
+                                            store: 'publicPostStore'
+                                        }
+                                    ]
                                 },
                                 {
                                     xtype: 'panel',
