@@ -168,12 +168,11 @@ Ext.define('ChatDawg40.view.MainView', {
                                             autoScroll: true,
                                             itemSelector: 'div',
                                             itemTpl: [
-                                                '<div style="color:#0000FF">',
-                                                '  <h3>{username}  {date}</h3>',
-                                                '  <p>{post}</p>',
-                                                '    Smile({smile}) Frown({frown}) Sad({sad}) Viewed ({viewed})',
-                                                '</div>',
-                                                ''
+                                                '',
+                                                '    <p style="color:gray;margin-left:20px;">{username}  {date}</p>',
+                                                '    <p style="color:blue;margin-left:20px;">{post}</p>',
+                                                '<p style="color:gray;margin-left:20px;">Smile({smile}) Frown({frown}) Sad({sad}) Viewed ({viewed})</p>',
+                                                '--------------------------------------------------'
                                             ],
                                             store: 'publicPostStore'
                                         }
