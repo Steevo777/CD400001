@@ -52,6 +52,18 @@ Ext.define('ChatDawg40.model.postModel', {
         },
         {
             name: 'date'
+        },
+        {
+            name: 'smile'
+        },
+        {
+            name: 'frown'
+        },
+        {
+            name: 'sad'
+        },
+        {
+            name: 'viewed'
         }
     ]
 });
