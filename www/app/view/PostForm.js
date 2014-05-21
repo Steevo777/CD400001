@@ -57,14 +57,6 @@ Ext.define('ChatDawg40.view.PostForm', {
                             anchor: '100%',
                             fieldLabel: '',
                             labelAlign: 'right',
-                            name: 'party',
-                            boxLabel: 'Party'
-                        },
-                        {
-                            xtype: 'checkboxfield',
-                            anchor: '100%',
-                            fieldLabel: '',
-                            labelAlign: 'right',
                             name: 'public',
                             boxLabel: 'Public'
                         },
@@ -83,6 +75,14 @@ Ext.define('ChatDawg40.view.PostForm', {
                             labelAlign: 'right',
                             name: 'family',
                             boxLabel: 'Family'
+                        },
+                        {
+                            xtype: 'checkboxfield',
+                            anchor: '100%',
+                            fieldLabel: '',
+                            labelAlign: 'right',
+                            name: 'party',
+                            boxLabel: 'Party'
                         },
                         {
                             xtype: 'button',
