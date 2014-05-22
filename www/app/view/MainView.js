@@ -114,6 +114,27 @@ Ext.define('ChatDawg40.view.MainView', {
                                 },
                                 {
                                     xtype: 'panel',
+                                    title: 'Family',
+                                    items: [
+                                        {
+                                            xtype: 'dataview',
+                                            autoRender: true,
+                                            autoScroll: true,
+                                            itemSelector: 'div',
+                                            itemTpl: [
+                                                '',
+                                                '    <p style="color:gray;margin-left:20px;">{username}  {date}</p>',
+                                                '    <p style="color:blue;margin-left:20px;">{post}</p>',
+                                                '<tpl if="postpictureID"><p><img src="{postpictureID}" alt="Smiley face" height="42" width="42"></p></tpl>',
+                                                '    <p style="color:gray;margin-left:20px;">Smile({smile}) Frown({frown}) Sad({sad}) Viewed ({viewed})</p>',
+                                                '--------------------------------------------------'
+                                            ],
+                                            store: 'publicPostStore'
+                                        }
+                                    ]
+                                },
+                                {
+                                    xtype: 'panel',
                                     title: 'Friends',
                                     items: [
                                         {
@@ -136,6 +157,27 @@ Ext.define('ChatDawg40.view.MainView', {
                                 {
                                     xtype: 'panel',
                                     title: 'Party',
+                                    items: [
+                                        {
+                                            xtype: 'dataview',
+                                            autoRender: true,
+                                            autoScroll: true,
+                                            itemSelector: 'div',
+                                            itemTpl: [
+                                                '',
+                                                '    <p style="color:gray;margin-left:20px;">{username}  {date}</p>',
+                                                '    <p style="color:blue;margin-left:20px;">{post}</p>',
+                                                '<tpl if="postpictureID"><p><img src="{postpictureID}" alt="Smiley face" height="42" width="42"></p></tpl>',
+                                                '    <p style="color:gray;margin-left:20px;">Smile({smile}) Frown({frown}) Sad({sad}) Viewed ({viewed})</p>',
+                                                '--------------------------------------------------'
+                                            ],
+                                            store: 'partyStore'
+                                        }
+                                    ]
+                                },
+                                {
+                                    xtype: 'panel',
+                                    title: 'Private',
                                     items: [
                                         {
                                             xtype: 'dataview',

@@ -30,7 +30,8 @@ Ext.application({
     stores: [
         'publicPostStore',
         'freindsStore',
-        'partyStore'
+        'partyStore',
+        'FamilyStore'
     ],
     views: [
         'MainView',
