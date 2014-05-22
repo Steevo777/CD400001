@@ -1,13 +1,24 @@
 <?php 
   ob_start(); 
  
+ //htmlspecialchars($_POST['name']);
   // Define $myusername and $mypassword 
   $post = $_POST['post'];
+  $public = $_POST['public'];
+  $friends = $_POST['friends'];
+  $family = $_POST['family'];
+  $party = $_POST['party'];
+  
   $expiredate = $_POST['expiredate'];
   $expirehour = $_POST['expirehour'];
   $mypassword = $_POST['password'];
   $date = date('Y-m-d H:i:s'); 
    
+  $type = 'F';  
+  if ($public == 'on')
+  {
+  	$type = 'P'; 
+  }
   
   // To protect MySQL injection (more detail about MySQL injection) 
   //$myusername = stripslashes($myusername); 
@@ -28,7 +39,7 @@
 	     exit();  }
  	   
   $sql="INSERT INTO  `posts` (  `k1` ,  `userid` ,  `username` ,  `type` ,  `post` ,  `linkedpost` ,  `postpictureID` ,  `posturlID` ,  `postvideoID` , `date`, `expiredate` ,  `expirehours` ) 
-VALUES (NULL ,  '94',  'Superman',  'P',  '$post', NULL , NULL , NULL , NULL , '$date', '$expiredate','$expirehour');"; 
+VALUES (NULL ,  '94',  'Superman',  '$type',  '$post', NULL , NULL , NULL , NULL , '$date', '$expiredate','$expirehour');"; 
   //$sql = "SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'"; 
   $result = mysql_query($sql); 
    

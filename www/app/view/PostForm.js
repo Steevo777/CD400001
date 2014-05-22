@@ -27,6 +27,7 @@ Ext.define('ChatDawg40.view.PostForm', {
     height: 250,
     itemId: 'postForm',
     width: 400,
+    layout: 'fit',
     title: 'Post',
     modal: true,
 
