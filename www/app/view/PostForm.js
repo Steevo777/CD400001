@@ -24,9 +24,9 @@ Ext.define('ChatDawg40.view.PostForm', {
         'Ext.button.Button'
     ],
 
-    height: 250,
+    height: 309,
     itemId: 'postForm',
-    width: 400,
+    width: 429,
     layout: 'fit',
     title: 'Post',
     modal: true,
@@ -56,6 +56,8 @@ Ext.define('ChatDawg40.view.PostForm', {
                         {
                             xtype: 'checkboxfield',
                             anchor: '100%',
+                            margin: 20,
+                            padding: '',
                             fieldLabel: '',
                             labelAlign: 'right',
                             name: 'public',
@@ -64,6 +66,7 @@ Ext.define('ChatDawg40.view.PostForm', {
                         {
                             xtype: 'checkboxfield',
                             anchor: '100%',
+                            margin: 20,
                             fieldLabel: '',
                             labelAlign: 'right',
                             name: 'friends',
@@ -72,6 +75,7 @@ Ext.define('ChatDawg40.view.PostForm', {
                         {
                             xtype: 'checkboxfield',
                             anchor: '100%',
+                            margin: '',
                             fieldLabel: '',
                             labelAlign: 'right',
                             name: 'family',
@@ -80,6 +84,7 @@ Ext.define('ChatDawg40.view.PostForm', {
                         {
                             xtype: 'checkboxfield',
                             anchor: '100%',
+                            margin: '',
                             fieldLabel: '',
                             labelAlign: 'right',
                             name: 'party',
